@@ -38,8 +38,15 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'},
 	  }
   }
+
+  use { "ellisonleao/gruvbox.nvim" }
+  use { 'kartikp10/noctis.nvim', requires = { 'rktjmp/lush.nvim' } }
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
 
+  use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  })
 
   end)
