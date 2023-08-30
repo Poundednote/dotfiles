@@ -48,9 +48,17 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
+;;
+;;
+;; fix org roam bug as of 8/8/23
 
+(package! prisma-mode :recipe (:host github :repo "pimeys/emacs-prisma-mode" :branch "main"))
+(package! org :pin "ca873f7")
 (package! org-roam)
+(package! org-roam)
+(package! typescript-mode)
 (package! tree-sitter)
 (package! tree-sitter-langs)
 (package! citar)
 (package! citar-org-roam)
+(package! lsp-mode)

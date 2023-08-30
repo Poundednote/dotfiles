@@ -175,5 +175,5 @@ bar {
 
 #startup 
 exec_always gnome-terminal -- tmux new -A -s main -n terminal
-assign [class="firefox"] $ws3
-exec firefox
+assign [class="Google-chrome"] $ws3
+exec google-chrome
