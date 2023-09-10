@@ -78,7 +78,11 @@
 ;;
 ;;
 ;;
+;;
 
+(setq org-capture-templates '(("t" "Todo [inbox]" entry
+                               (file+headline "~/org/inbox.org" "Tasks")
+                               "* TODO %i%?")))
 (use-package! org-roam
   :init
   (setq org-roam-v2-ack t)
@@ -135,12 +139,10 @@
       (:prefix-map ("n" . "notes")
        :desc "Org Roam buffer toggle" "r" #'org-roam-buffer-toggle
        :desc "Org Roam find node" "f" #'org-roam-node-find
-       :desc "Org Roam instert new node" "l" #'org-roam-node-insert
-       :desc "Org Roam caputure today" "t" #'org-roam-dailies-capture-today
-       :desc "Org Roam capture" "n" #'org-roam-capture))
+       :desc "Org Roam instert new node" "l" #'org-roam-node-insert))
 
 (after! org
-  (setq org-agenda-files '("~/org/agenda.org"))
+  (setq org-agenda-files '("~/org"))
   (setq org-log-into-drawer t)
   (setq org-startup-folded 'content))
 
