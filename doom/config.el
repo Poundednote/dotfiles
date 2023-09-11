@@ -80,9 +80,6 @@
 ;;
 ;;
 
-(setq org-capture-templates '(("t" "Todo [inbox]" entry
-                               (file+headline "~/org/inbox.org" "Tasks")
-                               "* TODO %i%?")))
 (use-package! org-roam
   :init
   (setq org-roam-v2-ack t)
@@ -144,7 +141,10 @@
 (after! org
   (setq org-agenda-files '("~/org"))
   (setq org-log-into-drawer t)
-  (setq org-startup-folded 'content))
+  (setq org-startup-folded 'content)
+  (setq org-capture-templates '(("t" "Todo [inbox]" entry
+                                 (file+headline "~/org/inbox.org" "Tasks")
+                                 "* TODO %i%?"))))
 
 (use-package! tree-sitter
   :config
@@ -162,3 +162,6 @@
 (prefer-coding-system 'utf-8)
 (setq coding-system-for-read 'utf-8)
 (setq coding-system-for-write 'utf-8)
+
+(after! company
+  (setq company-idle-delay '0))

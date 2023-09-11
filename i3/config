@@ -186,10 +186,9 @@ bar {
 }
 
 #startup 
-exec --no-startup-id xrandr --output HDMI-2 --right-of eDP-1
-exec --no-startup-id lxpolkit
-assign [class="gnome-terminal-server"] $ws1
-exec_always gnome-terminal -- tmux new -A -s main -n terminal
+assign [class="Gnome-terminal"] $ws1
 assign [class="Google-chrome"] $ws3
 assign [class="Emacs"] $ws2
-exec_always emacsclient -nc
+exec_always gnome-terminal -- tmux new -A -s main -n terminal
+exec --no-startup-id xrandr --output HDMI-2 --right-of eDP-1
+exec --no-startup-id lxpolkit
