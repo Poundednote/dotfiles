@@ -52,7 +52,7 @@ bindsym $mod+Shift+Return exec gnome-terminal -- tmux new -A -s main -n terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -174,11 +174,9 @@ bar {
 }
 
 #startup 
-exec xrandr --output HDMI-2 --same-as eDP-1
-exec xrandr --output eDP-1 --off
-
+exec --no-startup-id xrandr --output HDMI-2 --right-of eDP-1
 exec --no-startup-id lxpolkit
 exec_always gnome-terminal -- tmux new -A -s main -n terminal
 assign [class="Google-chrome"] $ws3
 assign [class="Emacs"] $ws2
-exec emacsclient -nc
+exec_always emacsclient -nc
