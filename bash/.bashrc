@@ -120,3 +120,7 @@ export CURRENT_PROJECT_DIR=/home/rayyan/Projects/c/argument_parser/
 export SSH_STEALTH_SERVER=stealthbjjmacclesfield.wordpress.com@sftp.wp.com
 
 set -o vi
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
