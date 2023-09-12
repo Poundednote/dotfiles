@@ -164,4 +164,10 @@
 (setq coding-system-for-write 'utf-8)
 
 (after! company
-  (setq company-idle-delay '0))
+  (setq company-idle-delay '0)
+  (define-key company-active-map (kbd "<tab>") 'company-complete-selection)
+  (define-key company-search-map (kbd "<tab>") 'company-complete-selection))
+
+(dolist (charset '(koi8))
+  (set-fontset-font (frame-parameter nil 'font)
+    charset (font-spec :family "Fira Code" :height 90)))
