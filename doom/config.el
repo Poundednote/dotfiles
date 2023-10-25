@@ -80,6 +80,9 @@
 ;;
 ;;
 
+(set-frame-parameter (selected-frame) 'alpha-background 20)
+(add-to-list 'default-frame-alist '(alpha-background . 85))
+
 (use-package! org-roam
   :init
   (setq org-roam-v2-ack t)
@@ -105,14 +108,22 @@
                               "#+title: ${title}\n")
            :immediate-finish t
            :unnarrowed t)
+
           ("r" "reference" plain "%?"
            :if-new
            (file+head "reference/${title}.org" "#+title: ${title}\n")
 
            :unnarrowed t)
+
           ("a" "article" plain "%?"
            :if-new
            (file+head "articles/${title}.org" "#+title: ${title}\n#+filetags: :article:\n")
+           :immediate-finish t
+           :unnarrowed t)
+
+          ("s" "study" plain "%?"
+           :if-new
+           (file+head "study/${title}.org" "#+title: ${title}\n#+filetags: :study:\n")
            :immediate-finish t
            :unnarrowed t)))
 
@@ -139,6 +150,7 @@
        :desc "Org Roam instert new node" "l" #'org-roam-node-insert))
 
 (after! org
+  (setq org-hide-emphasis-markers t)
   (setq org-agenda-files '("~/org"))
   (setq org-log-into-drawer t)
   (setq org-startup-folded 'content)
@@ -168,6 +180,7 @@
   (define-key company-active-map (kbd "<tab>") 'company-complete-selection)
   (define-key company-search-map (kbd "<tab>") 'company-complete-selection))
 
-(dolist (charset '(koi8))
-  (set-fontset-font (frame-parameter nil 'font)
-    charset (font-spec :family "Fira Code" :height 90)))
+(use-package! lsp
+  :config
+  (lsp-mode))
+
