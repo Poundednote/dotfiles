@@ -59,3 +59,4 @@
 (package! citar)
 (package! citar-org-roam)
 (package! astro-ts-mode)
+(package! all-the-icons)

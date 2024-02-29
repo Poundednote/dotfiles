@@ -198,9 +198,11 @@ exec google-chrome
 
 assign [class="Emacs"] $ws2
 assign [class="Zotero"] $ws8
-exec zotero
+exec zotero-snap
 
 assign [class="Spotify"] $ws9
 exec spotify
+
+assign [class="discord"] $ws10
 
 exec --no-startup-id xrandr --output HDMI-2 --right-of eDP-1
