@@ -128,5 +128,6 @@ export PATH=$BUN_INSTALL/bin:$PATH
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
-alias smontr='xrandr --output HDMI-2 --right-of eDP-1 --auto'
+alias smon='xrandr --output HDMI-2 --right-of eDP-1 --auto'
+alias mon='xrandr --auto'
 alias ec='emacsclient -nc'
