@@ -158,6 +158,14 @@
                                  (file+headline "~/org/inbox.org" "Tasks")
                                  "* TODO %i%?"))))
 
+(add-to-list 'org-latex-packages-alist
+             '("" "tikz" t))
+
+(add-to-list 'org-latex-packages-alist
+             '("" "algpseudocode" t))
+
+(setq org-latex-create-formula-image-program 'imagemagick)
+
 (use-package! tree-sitter
   :config
   (global-tree-sitter-mode)
@@ -174,6 +182,8 @@
 (prefer-coding-system 'utf-8)
 (setq coding-system-for-read 'utf-8)
 (setq coding-system-for-write 'utf-8)
+(setq TeX-parse-self t)
+(setq TeX-auto-save t)
 
 (after! company
   (setq company-idle-delay '0)
@@ -186,3 +196,4 @@
 
 (use-package! all-the-icons
   :if (display-graphic-p))
+
