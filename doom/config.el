@@ -197,3 +197,12 @@
 (use-package! all-the-icons
   :if (display-graphic-p))
 
+(defun list-of-lists-to-org-table (lol &optional justify min-cell-width columns)
+  (let ((buf (get-buffer-create "*org-tb*")))
+    (with-current-buffer buf
+      (erase-buffer)
+      (mapcar (lambda (x)
+                (mapcar (lambda (y) (insert (format "%s&" y))) x)(insert "\n")) lol)
+      (table-capture 1 (point-max) "&" "\n" justify min-cell-width columns)
+      (buffer-substring-no-properties (point-min) (point-max))
+      )))

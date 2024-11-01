@@ -42,7 +42,7 @@ bindsym Shift+XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volu
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set -5%
 bindsym Print exec maim -s -u | xclip -selection clipboard -t image/png -i
 bindsym $mod+Shift+s exec maim -s -u | xclip -selection clipboard -t image/png -i
 
@@ -208,4 +208,5 @@ exec_always blueman-applet
 
 assign [class="discord"] $ws10
 
-exec --no-startup-id xrandr --output HDMI-2 --right-of eDP-1
+exec --no-startup-id xrandr --output HDMI-2 --same-as eDP-1
+exec setxkbmap us
