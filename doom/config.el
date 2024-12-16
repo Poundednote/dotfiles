@@ -91,16 +91,6 @@
   (org-roam-dailies-directory "daily")
   :config
   (org-roam-db-autosync-enable)
-  (setq org-roam-dailies-capture-templates
-        '(("d" "default" entry
-           "* %?"
-           :target (file+head "%<%Y-%m-%d>.org"
-                              "#+title: %<%Y-%m-%d>\n"))
-          ("m" "media notes" plain
-           "* Page - %^{Page Number}\n %?"
-           :target (file+head "%<%Y-%m-%d>%^{Source}%^{Author}.org"
-                              "#+title: %<%Y-%m-%d>-%\1-%\2\n #+filetags: :%\1 %\2:"))))
-
   (setq org-roam-capture-templates
         '(("m" "main" plain
            "%?"
@@ -191,6 +181,8 @@
   (define-key company-search-map (kbd "<tab>") 'company-complete-selection))
 
 (use-package! lsp
+  :init
+  (setq lsp-completion-enable 0)
   :config
   (lsp-mode))
 
@@ -206,3 +198,5 @@
       (table-capture 1 (point-max) "&" "\n" justify min-cell-width columns)
       (buffer-substring-no-properties (point-min) (point-max))
       )))
+
+(add-hook! 'org-mode-hook (lambda () (+org-pretty-mode)))
