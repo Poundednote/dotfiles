@@ -1,28 +1,54 @@
-require 'nvim-treesitter.install'.compilers = { "clang" }
-require 'nvim-treesitter.configs'.setup {
-  -- A list of parser names, or "all"
-  ensure_installed = {"cpp", "c", "python", "vim", "lua", "rust", "comment"},
+require'nvim-treesitter.configs'.setup {
+        sync_install = false,
 
-  -- Install parsers synchronously (only applied to `ensure_installed`)
-  sync_install = false,
+        highlight = {
+                enable = true,
+                additional_vim_regex_highlighting = false,
+        },
 
-  -- Automatically install missing parsers when entering buffer
- -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-  auto_install = true,
+        indent = {
+                enable = true,
+        },
 
-  highlight = {
-    -- `false` will disable the whole extension
-    enable = true,
+        context = {
+                enable = true,
+        },
 
-   -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
-    -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
-    -- the name of the parser)
-    -- list of language that will be disabled
+        refactor = {
+                smart_rename = {
+                        enable = true,
+                        -- Assign keymaps to false to disable them, e.g. `smart_rename = false`.
+                        keymaps = {
+                                smart_rename = "<leader>rn",
+                        },
+                },
+                navigation = {
+                        enable = true,
+                        -- Assign keymaps to false to disable them, e.g. `goto_definition = false`.
+                        keymaps = {
+                                goto_definition = "gd",
+                                list_definitions = "gD",
+                                list_definitions_toc = "gO",
+                                goto_next_usage = "<a-*>",
+                                goto_previous_usage = "<a-#>",
+                        },
+                },
+                
+        },
+}
 
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
-  },
+require'treesitter-context'.setup{
+        enable = true, 
+        multiwindow = true, -- Enable multiwindow support.
+        max_lines = 3, -- How many lines the window should span. Values <= 0 mean no limit.
+        min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
+        line_numbers = true,
+        multiline_threshold = 20, -- Maximum number of lines to show for a single context
+        trim_scope = 'inner', -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
+        mode = 'cursor',  -- Line used to calculate context. Choices: 'cursor', 'topline'
+        -- Separator between context and content. Should be a single character string, like '-'.
+        -- When separator is set, the context will only show up when there are at least 2 lines above cursorline.
+        separator = '>',
+        zindex = 10, -- The Z-index of the context window
+        on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
 }
