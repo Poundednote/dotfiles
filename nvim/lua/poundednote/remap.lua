@@ -15,7 +15,7 @@ vim.keymap.set("n", "]e", vim.cmd.cnext)
 vim.keymap.set("n", "[e", vim.cmd.cprevious)
 
 local last_compile = nil
-function compile (input)
+function compile ()
         vim.ui.input({prompt = "Compile: "}, function (input)
                 if (input == nil) then return end
                 vim.cmd(string.format("Make %s", input))
@@ -27,9 +27,7 @@ vim.keymap.set("n", "<leader>cc", compile)
 
 vim.keymap.set("n", "<leader>CC", function () 
         if last_compile == nil then 
-                vim.ui.input({prompt = "Compile: "}, function (input)
-                        compile(input)
-                end)
+                compile("")
         else 
                 vim.cmd(string.format("Make %s", last_compile))
         end

@@ -10,9 +10,9 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.wrap = false
 
-vim.opt.directory = "C:/users/rayyan/.vim/swapfiles//"
-vim.opt.backupdir = "C:/users/rayyan/.vim/swapfiles//"
-vim.opt.undodir = "C:/users/rayyan/.vim/swapfiles//"
+vim.opt.directory = "C:/.vim/swapfiles//"
+vim.opt.backupdir = "C:/.vim/swapfiles//"
+vim.opt.undodir = "C:/.vim/swapfiles//"
 vim.opt.swapfile = true
 vim.opt.backup = true
 vim.opt.undofile = true
@@ -32,4 +32,5 @@ vim.g.mapleader = " "
 
 vim.opt.scrolloff = 8 
 vim.opt.updatetime = 50
+vim.opt.makeprg = nil;
 
