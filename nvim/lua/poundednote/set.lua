@@ -10,12 +10,13 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.wrap = false
 
-vim.opt.directory = "C:/users/rayyan/.vim/swapfiles//"
-vim.opt.backupdir = "C:/users/rayyan/.vim/swapfiles//"
-vim.opt.undodir = "C:/users/rayyan/.vim/swapfiles//"
+vim.opt.directory = "/home/rayyan/.vim/swapfiles//"
+vim.opt.backupdir = "/home/rayyan/.vim/backup//"
+vim.opt.undodir = "/home/rayyan/.vim/undo//"
 vim.opt.swapfile = true
 vim.opt.backup = true
 vim.opt.undofile = true
+vim.opt.makeprg = nil
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
