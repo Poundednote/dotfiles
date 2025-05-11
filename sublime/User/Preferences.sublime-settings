@@ -1,0 +1,81 @@
+{
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+
+
+	// ====== BEGIN NEOVINTAGEOUS =====
+	"neovintageous_build_version": 13200,
+	"vintageous_use_ctrl_keys": true,
+	"vintageous_enable_abolish": true,
+	"vintageous_enable_surround": true,
+	"vintageous_enable_seek": true,
+	"vintageous_use_sys_clipboard": true,
+	// ====== END NEOVINTAGEOUS =====
+
+	"theme": "gruvbox.sublime-theme",
+	"color_scheme": "Packages/gruvbox/gruvbox (Dark) (Hard).sublime-color-scheme",
+	"font_face": "Fira Code Mono",
+	/*"font_face": "Fira Code Mono",*/
+	"line_numbers": true,
+	"relative_line_numbers": true,
+	"show_sidebar_button": true,
+
+	"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?",
+
+	"font_size": 14,
+	"ruler_style": "solid",
+	"ruler_width": 6,
+	"rulers": [80, 120],
+	"tab_size": 8,
+	"use_tab_stops": true,
+	"detect_indentation": true,
+	"auto_indent": true,
+	"smart_indent": true,
+	"translate_tabs_to_spaces": true,
+
+	"indent_to_bracket": true,
+	"trim_automatic_white_space": true,
+	"auto_match_enabled": true,
+	"auto_close_tags": true,
+
+	"dictionary": "Packages/Language - English/en_UK.dic",
+
+	"draw_minimap_border": true,
+	"always_show_minimap_viewport": true,
+
+	"highlight_line": true,
+	"highlight_gutter": true,
+	"caret_extra_top": 0,
+	"caret_extra_bottom": 0,
+
+	"match_brackets": true,
+	"match_brackets_content": true,
+	"match_brackets_square": true,
+	"match_brackets_braces": true,
+	"match_brackets_angle": true,
+	"match_tags": true,
+	"match_selection": true,
+	"scroll_speed": 2,
+	"open_tabs_after_current": false,
+	"enable_tab_scrolling": true,
+	"show_git_status_in_status_bar": true,
+	"show_encoding": true,
+	"show_line_endings": true,
+	"show_indentation": true,
+	"show_syntax": true,
+	"show_line_column": "compact",
+	"ui_scale": 0,
+	"hot_exit": "always",
+	"hot_exit_projects": true,
+	"shell_environment": true,
+	"always_prompt_for_file_reload": true,
+        "create_window_at_startup": false,
+	"show_errors_inline": true,
+	"open_files_in_new_window": "never",
+	"close_windows_when_empty": true,
+	"show_full_path": true,
+	"scroll_past_end": true,
+
+}

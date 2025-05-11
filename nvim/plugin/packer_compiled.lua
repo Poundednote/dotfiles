@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "C:\\Users\\rayyan\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1713484068\\share\\lua\\5.1\\?.lua;C:\\Users\\rayyan\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1713484068\\share\\lua\\5.1\\?\\init.lua;C:\\Users\\rayyan\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1713484068\\lib\\luarocks\\rocks-5.1\\?.lua;C:\\Users\\rayyan\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1713484068\\lib\\luarocks\\rocks-5.1\\?\\init.lua"
-local install_cpath_pattern = "C:\\Users\\rayyan\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1713484068\\lib\\lua\\5.1\\?.so"
+local package_path_str = "/Users/ray/.cache/nvim/packer_hererocks/2.1.1736781742/share/lua/5.1/?.lua;/Users/ray/.cache/nvim/packer_hererocks/2.1.1736781742/share/lua/5.1/?/init.lua;/Users/ray/.cache/nvim/packer_hererocks/2.1.1736781742/lib/luarocks/rocks-5.1/?.lua;/Users/ray/.cache/nvim/packer_hererocks/2.1.1736781742/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/ray/.cache/nvim/packer_hererocks/2.1.1736781742/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -76,87 +76,87 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["compile-mode.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\rayyan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\compile-mode.nvim",
+    path = "/Users/ray/.local/share/nvim/site/pack/packer/start/compile-mode.nvim",
     url = "https://github.com/ej-shafran/compile-mode.nvim"
   },
   ["gruvbox.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\rayyan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gruvbox.nvim",
+    path = "/Users/ray/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
   ["happy_hacking.vim"] = {
     loaded = true,
-    path = "C:\\Users\\rayyan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\happy_hacking.vim",
+    path = "/Users/ray/.local/share/nvim/site/pack/packer/start/happy_hacking.vim",
     url = "https://github.com/yorickpeterse/happy_hacking.vim"
   },
   ["lush.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\rayyan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lush.nvim",
+    path = "/Users/ray/.local/share/nvim/site/pack/packer/start/lush.nvim",
     url = "https://github.com/rktjmp/lush.nvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\rayyan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\markdown-preview.nvim",
+    path = "/Users/ray/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["noctis.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\rayyan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\noctis.nvim",
+    path = "/Users/ray/.local/share/nvim/site/pack/packer/start/noctis.nvim",
     url = "https://github.com/kartikp10/noctis.nvim"
   },
   ["nvim-tree-docs"] = {
     loaded = true,
-    path = "C:\\Users\\rayyan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-tree-docs",
+    path = "/Users/ray/.local/share/nvim/site/pack/packer/start/nvim-tree-docs",
     url = "https://github.com/nvim-treesitter/nvim-tree-docs"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "C:\\Users\\rayyan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
+    path = "/Users/ray/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-treesitter-context"] = {
     loaded = true,
-    path = "C:\\Users\\rayyan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter-context",
+    path = "/Users/ray/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
   },
   ["nvim-treesitter-refactor"] = {
     loaded = true,
-    path = "C:\\Users\\rayyan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter-refactor",
+    path = "/Users/ray/.local/share/nvim/site/pack/packer/start/nvim-treesitter-refactor",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-refactor"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\rayyan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
+    path = "/Users/ray/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\rayyan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
+    path = "/Users/ray/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\rayyan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-file-browser.nvim",
+    path = "/Users/ray/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
     url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\rayyan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
+    path = "/Users/ray/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\rayyan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tokyonight.nvim",
+    path = "/Users/ray/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   },
   undotree = {
     loaded = true,
-    path = "C:\\Users\\rayyan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\undotree",
+    path = "/Users/ray/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
   ["vim-dispatch"] = {
     loaded = true,
-    path = "C:\\Users\\rayyan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-dispatch",
+    path = "/Users/ray/.local/share/nvim/site/pack/packer/start/vim-dispatch",
     url = "https://github.com/tpope/vim-dispatch"
   }
 }
