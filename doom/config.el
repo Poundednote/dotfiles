@@ -147,6 +147,12 @@
   (setq org-capture-templates '(("t" "Todo [inbox]" entry
                                  (file+headline "~/org/inbox.org" "Tasks")
                                  "* TODO %i%?"))))
+  (setq org-cite-global-bibliography '("~/RoamNotes/biblio.bib"))
+(require 'oc-csl)
+
+(map! :after org :map org-mode-map
+ "C-n" #'org-next-visible-heading
+ "C-p" #'org-previous-visible-heading)
 
 (add-to-list 'org-latex-packages-alist
              '("" "tikz" t))
@@ -188,15 +194,5 @@
 
 (use-package! all-the-icons
   :if (display-graphic-p))
-
-(defun list-of-lists-to-org-table (lol &optional justify min-cell-width columns)
-  (let ((buf (get-buffer-create "*org-tb*")))
-    (with-current-buffer buf
-      (erase-buffer)
-      (mapcar (lambda (x)
-                (mapcar (lambda (y) (insert (format "%s&" y))) x)(insert "\n")) lol)
-      (table-capture 1 (point-max) "&" "\n" justify min-cell-width columns)
-      (buffer-substring-no-properties (point-min) (point-max))
-      )))
 
 (add-hook! 'org-mode-hook (lambda () (+org-pretty-mode)))

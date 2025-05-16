@@ -27,11 +27,9 @@ vim.keymap.set("n", "<leader>cc", compile)
 
 vim.keymap.set("n", "<leader>CC", function () 
         if last_compile == nil then 
-                vim.ui.input({prompt = "Compile: "}, function (input)
-                        compile(input)
-                end)
+                compile(input)
         else 
-                vim.cmd(string.format("Make %s", last_compile))
+                vim.cmd(string.format("Make ./%s", last_compile))
         end
 end)
 
