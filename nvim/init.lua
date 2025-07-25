@@ -1,3 +1,7 @@
+require("config.lazy")
+
+vim.lsp.enable("clangd")
+
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>wv", vim.cmd.vsplit)
@@ -13,6 +17,7 @@ vim.keymap.set("n", "<leader>wL", "<cmd>wincmd L<cr>")
 vim.keymap.set("n", "<M-x>", ":<C-f>i")
 vim.keymap.set("n", "]e", vim.cmd.cnext)
 vim.keymap.set("n", "[e", vim.cmd.cprevious)
+vim.keymap.set("n", "gd", "<C-]>")
 
 local last_compile = nil
 function compile ()
@@ -64,6 +69,8 @@ vim.opt.cursorline = true
 vim.opt.autochdir = true
 
 vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
 
 vim.opt.scrolloff = 8 
 vim.opt.updatetime = 50

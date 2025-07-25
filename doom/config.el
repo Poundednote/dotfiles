@@ -109,6 +109,10 @@
            (file+head "reference/${title}.org" "#+title: ${title}\n")
 
            :unnarrowed t)
+          ("w" "work" plain "%?"
+           :if-new
+           (file+head "work/${title}.org" "#+title: ${title}\n")
+           t)
           ("a" "article" plain "%?"
            :if-new
            (file+head "articles/${title}.org" "#+title: ${title}\n#+filetags: :article:\n")

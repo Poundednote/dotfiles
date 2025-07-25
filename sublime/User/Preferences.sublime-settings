@@ -72,10 +72,11 @@
 	"shell_environment": true,
 	"always_prompt_for_file_reload": true,
         "create_window_at_startup": false,
-	"show_errors_inline": true,
+	"show_errors_inline": false,
 	"open_files_in_new_window": "never",
 	"close_windows_when_empty": true,
 	"show_full_path": true,
 	"scroll_past_end": true,
 
+	"index_files": true,
 }

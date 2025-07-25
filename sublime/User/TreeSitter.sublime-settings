@@ -1,0 +1,10 @@
+{
+	"installed_languages":
+	[
+		"python",
+		"json",
+		"c"
+	],
+	
+	"python_path": "/opt/homebrew/bin/python3",
+}
