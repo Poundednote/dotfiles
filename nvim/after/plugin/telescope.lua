@@ -27,6 +27,7 @@ telescope.setup {
         find_files = {hidden = true, theme = "ivy"},
         git_files = {theme = "ivy"},
         buffers = {theme = "ivy"},
+        grep_string = {theme = "ivy"},
     },
 }
 

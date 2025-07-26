@@ -18,6 +18,7 @@ vim.keymap.set("n", "<M-x>", ":<C-f>i")
 vim.keymap.set("n", "]e", vim.cmd.cnext)
 vim.keymap.set("n", "[e", vim.cmd.cprevious)
 vim.keymap.set("n", "gd", "<C-]>")
+vim.keymap.set("n", "<leader><TAB>", "<C-^>")
 
 local last_compile = nil
 function compile ()

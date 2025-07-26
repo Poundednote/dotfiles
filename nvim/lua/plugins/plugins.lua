@@ -18,4 +18,5 @@ return {
         'iamcco/markdown-preview.nvim',
         'neovim/nvim-lspconfig',
         'ervandew/supertab',
+        'stevearc/oil.nvim',
 }
